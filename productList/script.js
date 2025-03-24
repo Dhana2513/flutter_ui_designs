@@ -398,7 +398,9 @@ function searchProducts() {
 // Setup event listeners
 function setupEventListeners() {
     // Navigation
-    addProductBtn.addEventListener('click', showAddProductScreen);
+    // Remove or comment out the line that's causing the error
+    // addProductBtn.addEventListener('click', showAddProductScreen);
+    
     backToListBtn.addEventListener('click', showProductListScreen);
     backToListFromDetailsBtn.addEventListener('click', showProductListScreen);
     
