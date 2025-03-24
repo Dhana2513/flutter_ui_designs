@@ -6,6 +6,55 @@
     <title>Student Application</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .api-documentation {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            font-family: monospace;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .api-documentation h3 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .api-endpoint {
+            margin-bottom: 20px;
+        }
+        .api-endpoint h4 {
+            margin: 10px 0 5px;
+            color: #007bff;
+        }
+        .api-endpoint pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .method {
+            font-weight: bold;
+            color: #28a745;
+        }
+        .url {
+            color: #dc3545;
+        }
+        @media (max-width: 1200px) {
+            .api-documentation {
+                position: static;
+                margin: 20px auto;
+                transform: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="mobile-frame">
@@ -94,6 +143,50 @@
             <div class="home-indicator"></div>
         </div>
     </div>
+
+    <!-- API Documentation Section -->
+    <div class="api-documentation">
+        <h3>API Documentation</h3>
+        
+        <div class="api-endpoint">
+            <h4>Get all Students</h4>
+            <pre><span class="method">GET</span>: <span class="url">https://student-records-1ukt.onrender.com/students</span></pre>
+        </div>
+        
+        <div class="api-endpoint">
+            <h4>Add Student</h4>
+            <pre><span class="method">POST</span>: <span class="url">https://student-records-1ukt.onrender.com/add-student</span>
+body: 
+{
+    "name":"Kshitij",
+    "marathiMarks": 36,
+    "hindiMarks": 36,
+    "englishMarks": 99,
+    "scienceMarks":89,
+    "historyMarks":97
+}</pre>
+        </div>
+        
+        <div class="api-endpoint">
+            <h4>Edit Student</h4>
+            <pre><span class="method">PUT</span>: <span class="url">https://student-records-1ukt.onrender.com/students/${id}</span>
+body: 
+{
+    "name":"Kshitij",
+    "marathiMarks": 36,
+    "hindiMarks": 36,
+    "englishMarks": 99,
+    "scienceMarks":89,
+    "historyMarks":97
+}</pre>
+        </div>
+        
+        <div class="api-endpoint">
+            <h4>Delete Student</h4>
+            <pre><span class="method">DELETE</span>: <span class="url">https://student-records-1ukt.onrender.com/students/${id}</span></pre>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
