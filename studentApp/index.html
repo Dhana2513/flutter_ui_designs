@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <div class="mobile-screen">
+            <div class="status-bar">
+                <div class="status-bar-time">9:41</div>
+                <div class="status-bar-icons">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-full"></i>
+                </div>
+            </div>
+            
+            <!-- Screen 1: Student List / Leaderboard -->
+            <div class="screen" id="student-list-screen">
+                <div class="screen-header">
+                    <h2>Student Leaderboard</h2>
+                </div>
+                <div class="leaderboard-container">
+                    <div class="leaderboard-header">
+                        <div class="rank">Rank</div>
+                        <div class="student-name">Name</div>
+                        <div class="percentage">Percentage</div>
+                    </div>
+                    <div class="leaderboard-list" id="student-list">
+                        <!-- Student list will be populated by JavaScript -->
+                    </div>
+                </div>
+                <button class="fab" id="add-student-btn">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            
+            <!-- Screen 2: Add Student Marks -->
+            <div class="screen" id="add-student-screen" style="display: none;">
+                <div class="screen-header">
+                    <button class="back-btn" id="back-to-list-btn">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h2>Add Student Marks</h2>
+                </div>
+                <div class="form-container">
+                    <form id="student-form">
+                        <div class="form-group">
+                            <label for="student-name">Student Name</label>
+                            <input type="text" id="student-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="marathi">Marathi</label>
+                            <input type="number" id="marathi" min="0" max="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hindi">Hindi</label>
+                            <input type="number" id="hindi" min="0" max="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="english">English</label>
+                            <input type="number" id="english" min="0" max="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="science">Science</label>
+                            <input type="number" id="science" min="0" max="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="history">History</label>
+                            <input type="number" id="history" min="0" max="100" required>
+                        </div>
+                        <button type="submit" class="save-btn">Save</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Screen 3: Student Details -->
+            <div class="screen" id="student-details-screen" style="display: none;">
+                <div class="screen-header">
+                    <button class="back-btn" id="back-to-list-from-details-btn">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h2>Student Details</h2>
+                </div>
+                <div class="student-details-container" id="student-details">
+                    <!-- Student details will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="home-indicator"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
