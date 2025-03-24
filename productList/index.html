@@ -6,6 +6,34 @@
     <title>Product Catalog</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .api-documentation {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-family: monospace;
+        }
+        .api-documentation h3 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+        .api-endpoint pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0;
+        }
+        .url {
+            color: #dc3545;
+        }
+    </style>
 </head>
 <body>
     <div class="mobile-frame">
@@ -99,6 +127,16 @@
             <div class="home-indicator"></div>
         </div>
     </div>
+    
+    <!-- API Documentation Section -->
+    <div class="api-documentation">
+        <h3>API Endpoint</h3>
+        <div class="api-endpoint">
+            <pre>Get All Products:
+<span class="url">https://dummyjson.com/products</span></pre>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
